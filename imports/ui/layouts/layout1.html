@@ -1,0 +1,123 @@
+<template name='layoutOne'>
+	{{> navbartemp}}
+	<article>
+		<div class="container">
+			{{> yield}}
+		</div>
+	</article>
+	{{> footertemp}}
+</template>
+<template name="navbartemp">
+	<nav class="navbar navbar-expand-lg navbar-light navbar-custom-color">
+		<div class="container">
+			<a class="navbar-brand" href="#">Organize</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="{{pathFor route='home'}}">Home<span
+								class="sr-only">(current)</span></a>
+					</li>
+					{{#if currentUser}}
+					<li class="nav-item">
+						<a class="nav-link {{#if currentUser}}{{else}}disabled{{/if}}"
+							href="{{pathFor route='profile'}}">profile</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{#if currentUser}}{{else}}disabled{{/if}}"
+							href="{{pathFor route='tasks'}}">tasks</a>
+					</li>
+					{{/if}}
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<ul class="navbar-nav mr-auto">
+						{{#if currentUser}}
+						<li class="nav-item"><a class="nav-link" href="{{pathFor route='home'}}"
+								id='sign_out'>SignOut</a>
+						</li>
+						{{else}}
+						<li class="nav-item"><a class="nav-link" href="{{pathFor route='connection'}}">SignIn</a></li>
+						{{/if}}
+					</ul>
+				</form>
+			</div>
+		</div>
+	</nav>
+</template>
+
+
+<template name="footertemp">
+
+	<footer class="footer page-footer font-small indigo">
+		<div class="container text-center text-md-left">
+			<div class="row">
+				<div class="col-md-3 mx-auto">
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Plan du site</h5>
+					<ul class="list-unstyled">
+						<li><a href="{{pathFor route='home'}}">Home</a></li>
+						{{#if currentUser}}
+						<li><a href="{{pathFor route='profile'}}">Profile</a></li>
+						<li><a href="{{pathFor route='tasks'}}">Tasks</a></li>
+						<li><a href="{{pathFor route='home'}}" id='sign_out'>SignOut</a></li>
+						{{else}}
+						<li><a href="{{pathFor route='connection'}}">SignIn</a></li>
+						{{/if}}
+					</ul>
+				</div>
+
+				<hr class="clearfix w-100 d-md-none">
+				<div class="col-md-3 mx-auto">
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact</h5>
+					<ul class="list-unstyled">
+						<li>By mail: <a href="mailto:mahmoudsouayfan@gmail.com?Subject=meteor%20test"
+								target="_top">mail</a>
+						</li>
+						<li>By phone: <a href="#">+33 7 21 21 21 21</a></li>
+						<li></li>
+						<li></li>
+						<li>
+							<h5>Or visit us in our location:</h5>
+							<a
+								href="https://www.google.com/maps/place/2+Rue+Fran%C3%A7ois+Verny,+29200+Brest/@48.4192023,-4.4746679,17z/data=!3m1!4b1!4m5!3m4!1s0x4816bbba8b456fed:0x9489a42be32acb19!8m2!3d48.4191988!4d-4.4724792">
+								2 rue François Verny,
+								Brest 29200
+							</a>
+						</li>
+					</ul>
+
+				</div>
+				<hr class="clearfix w-100 d-md-none">
+				<div class="col-md-3 mx-auto">
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Who are we ?</h5>
+					<ul class="list-unstyled">
+						<p class="text-justify">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem
+							Ipsum has been the industry's standard dummy text ever since the 1500s, when
+							an
+							unknown printer took a galley of type and scrambled it to make a type
+							specimen
+							book.
+						</p>
+					</ul>
+				</div>
+				<hr class="clearfix w-100 d-md-none">
+				<div class="col-md-3 mx-auto">
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+					<ul class="list-unstyled social-network social-circle social-media-list">
+						<li><a href="#" class="fa fa-facebook"></a></li>
+						<li><a href="#" class="fa fa-youtube"></a></li>
+						<li><a href="#" class="fa fa-instagram"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">© Copyright 2019 -
+			<a href="#">Meteor devteam</a>
+		</div>
+	</footer>
+</template>

@@ -1,0 +1,18 @@
+<template name="task">
+  <div class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <div class="row">
+      <div class="card-container-x">
+        <div class="row">
+          <div class="col l1">
+            <input type="checkbox" checked="{{checked}}" class="toggle-checked" id="check" />
+            <label for="check" style="size: 0px;"></label>
+          </div>
+
+          <div class="col l3"><span class="text"><strong>owner: {{username}}</strong> - description: {{text}}</span>
+          </div>
+          <div class="col l1 offset-l7"><button class="delete">&times;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

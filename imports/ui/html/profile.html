@@ -1,0 +1,80 @@
+<template name='profile'>
+    <!--Display User informations-->
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div class="container">
+                <div class="center-item">
+                    <div class="card-container">
+                        <span class="pro">PRO User</span>
+                        <img src="images/github.png" alt="user" />
+                        <h3>{{currentUser.profile.firstname}} {{currentUser.profile.lastname}}</h3>
+                        <h6>Pseudo: {{currentUser.username}}</h6>
+                        <div class="buttons">
+                            <button class="primary"
+                                onclick="location.href='mailto:mahmoudsouayfan@gmail.com'">Mail</button>
+                        </div>
+                        <div class="skills">
+                            <ul>
+                                subscribed in <li>{{incompleteCount}}</li> groups
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="tasks-card-container">
+                        <h1>Groups:
+                            <!--({{incompleteCount}})-->
+                        </h1>
+                        <label class="hide-completed">
+                            <input type="checkbox" />
+                            Hide Completed Groups
+                        </label>
+                        <label class="showAll-Groups">
+                            <input type="checkbox" />
+                            Show all Groups
+                        </label>
+
+                        <div class="erreurs">Erreur : </div>
+                        {{#if currentUser}}
+                        <form class="new-group">
+                            <input type="text" name="text" placeholder="Type to add new groups" />
+                        </form>
+                        {{/if}}
+                        <p>GROUPS:</p>
+                        <div class="container">
+                            <div class="card-columns">
+                                {{#each groups}}
+                                <div class="card-x">
+                                    <div class="tasks-card-container-x">
+                                        {{> group}}
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <p>TASKS:</p>
+                        {{#if currentUser}}
+                        <form class="new-task">
+                            <input type="text" name="text" placeholder="Type to add new tasks" />
+                        </form>
+                        {{/if}}
+                        <div class="container">
+                            <div class="card-columns">
+                                {{#each tasks}}
+                                <div class="card-x">
+                                    <div class="tasks-card-container-x">
+                                        {{> task}}
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</template>

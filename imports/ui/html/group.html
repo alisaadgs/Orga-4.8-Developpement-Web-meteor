@@ -1,0 +1,33 @@
+<template name="group">
+  <!--
+    to show about groups:
+      + picture
+      + name
+      + title + owner
+  -->
+  <div class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <div class="row">
+      <div class="card-container-x">
+        <span class="text">
+          <input type="checkbox" checked="{{checked}}" class="toggle-checked red filled-in" id="check" />
+          <strong>owner: {{username}}</strong> - Group name: {{text}}
+          <button class="delete">&times;</button>
+        </span>
+        <div class="buttons">
+          {{#if isOwner}}
+          <button class="toggle-private">
+            {{#if private}}
+            Private
+            {{else}}
+            Public
+            {{/if}}
+          </button>
+          {{/if}}
+        </div>
+        <div class="offset-l6">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

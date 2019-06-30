@@ -1,0 +1,60 @@
+<template name="connection">
+	{{#if currentUser}}
+	{{> profile}}
+	{{else}}
+	{{> login}}
+	{{/if}}
+</template>
+<template name="login">
+	<p></p>
+	<div class="centered">
+		<div class="container">
+			<div class="center">
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3"></div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="card card-signin my-5">
+							<div class="card-body">
+								<h3 class="card-title text-center">Sign In</h3>
+								<form class="form-signin">
+									<div class="form-label-group">
+										<input type="email" id="login-email" name="login-email" class="form-control"
+											placeholder="Email address" required autofocus>
+										<label for="login-email">Email address</label>
+									</div>
+
+									<div class="form-label-group">
+										<input type="password" id="login-password" class="form-control"
+											name="login-password" placeholder="Password" required>
+										<label for="login-password">Password</label>
+									</div>
+
+									<div class="custom-control custom-checkbox mb-3">
+										<input type="checkbox" class="custom-control-input" id="customCheck1">
+										<label class="custom-control-label" for="customCheck1">Remember password</label>
+									</div>
+									<button class="btn btn-lg btn-primary btn-block text-uppercase" name="btn_login"
+										type="submit">
+										Sign in</button>
+									<div class="text-center">
+										<p>or</p>
+										<p class="center">sign up if its your first visit!</p>
+										<button class="btn btn-lg btn-success btn-block text-uppercase"
+											onclick="location.href='{{pathFor route='inscription'}}'">Sign
+											up</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3"></div>
+				</div>
+			</div>
+			<p></p>
+			<p></p>
+		</div>
+	</div>
+</template>
+<template name="test">
+	test
+</template>

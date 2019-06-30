@@ -1,0 +1,220 @@
+<template name="inscription">
+    <div class="section"></div>
+    <div class="container">
+        <!---->
+        <div class="center">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3"></div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Rejoignez notre communauté maintenant!</h3>
+                            <form id="form_signup" method="POST">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-label-group">
+                                            <input type="text" id="firstname" name="prenom" class="form-control"
+                                                required autofocus>
+                                            <label for="firstname">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-label-group">
+                                            <input type="text" id="lastname" name="prenom" class="form-control" required
+                                                autofocus>
+                                            <label for="lastname">Last Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-label-group">
+                                            <label for="birthday">Date de naissance :</label>
+                                            <input type="date" class="datepicker form-control" name="birthday"
+                                                id="birthday">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-label-group">
+                                            <div class="radio">
+                                                <label for="sexe">Sexe:</label> &nbsp;&nbsp;
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="sexe" id="M">Man
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="sexe" id="W">Women
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input type="text" id="username" name="username" class="form-control" required
+                                        autofocus>
+                                    <label for="username">user name</label>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input type="text" id="email" name="email" class="form-control" required autofocus>
+                                    <label for="email">E-mail</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-label-group">
+                                            <input type="password" id="password" name="password" class="form-control"
+                                                required autofocus>
+                                            <label for="password">password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-label-group">
+                                            <input type="password" id="passwordConf" name="passwordConf"
+                                                class="form-control" required autofocus>
+                                            <label for="passwordConf">Confirm your password</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-lg btn-success btn-block text-uppercase" name="btn_register"
+                                    type="submit">
+                                    Register
+                                </button>
+                                <!--<hr class="my-4">-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3"></div>
+            </div>
+        </div>
+        <p></p>
+        <p></p>
+        <!--
+        <div class="col l9 m10 s9">
+            <div class="col l9 m10 s9">
+                <div class="container">
+                    <form id='form_signup' method='post'>
+                        <div class="card-panel z-depth-3">
+                            <h4 class="center">Inscription</h4>
+                            <p class="center">Rejoignez notre communauté maintenant!</p>
+                            <p></p>
+                            <p class="center"></p>
+                            <div class="row">
+                                <div class="col s6">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">account_box</i>
+                                        <input type="text" name="prenom" id="firstname" autofocus/>
+                                        <label for="firstname">First Name</label>
+                                    </div>
+                                </div>
+                                <div class="col  s6">
+                                    <div class="input-field">
+                                        <input type="text" name="prenom" id="lastname" />
+                                        <label for="lastname">Last Name :</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label style="font-size: 2ems" for="sexe">Sexe :</label><br/>
+                                    &nbsp;<input class="with-gap" type="radio" name="sexe" id="M" value="M" /><label for="M">Homme</label><br>
+                                    &nbsp;<input class="with-gap" type="radio" name="sexe" id="F" value="F" /><label for="F">Femme</label><br>
+                                    &nbsp;<input class="with-gap" type="radio" name="sexe" id="O" value="O" checked/><label for="O">Autre</label><br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label for="birthday">Date de naissance :</label> <br/>
+                                    <input type="date" class="datepicker" name="birthday" id="birthday" >
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <label for="username">Pseudo :</label>
+                                        <input type="text" name="username" id="username"/>                        
+                                    </div>
+                                </div>
+                                <div class="col s6">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">email</i>
+                                        <label for="email">Email :</label>
+                                        <input type="text" name="email" id="email"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">lock</i>
+                                        <label for="password">Mot de passe :</label>
+                                        <input type="password" name="password" id="password"/>
+                                    </div>
+                                </div>
+                                <div class="col s6">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">refresh</i>
+                                        <label for="passwordConf">Confirmation du mot de passe :</label>
+                                        <input type="password" name="passwordConf" id="passwordConf"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="center">
+                                    <input class="waves-effect btn grey darken-4" type="submit" value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    -->
+    </div>
+</template>
+
+
+<!--
+    <fieldset>
+            <p>
+                <label for="firstname">Prénom :</label>
+                <input type="text" name="prenom" id="firstname" placeholder="prenom" autofocus/>
+            </p>
+            <p>
+                <label for="lastname">Nom :</label>
+                <input type="text" name="prenom" id="lastname" placeholder="nom" />
+            </p>
+            <p>
+                <label for="sexe">Sexe :</label> <br/>
+                <input type="radio" name="sexe" value="M" />Homme<br/>
+                <input type="radio" name="sexe" value="F" />Femme<br/>
+                <input type="radio" name="sexe" value="O" checked/>Autre<br/>
+            </p>
+            <p>
+                <label for="birthday">Date de naissance :</label> <br/>
+                <input type="date" name="birthday" id="birthday">
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>
+                <label for="username">Pseudo :</label>
+                <input type="text" name="username" id="username" placeholder="username" />
+            </p>
+            <p>
+                <label for="email">Email :</label>
+                <input type="text" name="email" id="email" placeholder="exemple@email.com" />
+            </p>
+            <p>
+                <label for="password">Mot de passe :</label>
+                <input type="password" name="password" id="password" placeholder="mot de passe" />
+            </p>
+            <p>
+                <label for="passwordConf">Confirmation du mot de passe :</label>
+                <input type="password" name="passwordConf" id="passwordConf" placeholder="mot de passe" />
+            </p>
+        </fieldset>
+        <input type="submit" value="Envoyer"/>
+-->
